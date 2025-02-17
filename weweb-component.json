@@ -1,0 +1,9 @@
+{
+  "name": "ag-grid-custom-component",
+  "displayName": "AG Grid Component",
+  "entry": "src/CustomAgGrid.vue",
+  "version": "1.0.0",
+  "description": "Custom AG Grid coded component for WeWeb.",
+  "author": "",
+  "componentType": "component"
+}
