@@ -96,6 +96,10 @@ export default {
     const columnApi = ref(null);
     const quickFilterText = ref('');
     const activeTab = ref('all');
+    const theme = computed(() => {
+      return props.customTheme && props.customTheme.themeName ? props.customTheme.themeName : 'ag-theme-alpine';
+    });
+    const themeClass = theme;
 
     // Column definitions
     const columnDefs = computed(() => [
@@ -145,9 +149,6 @@ export default {
       type: 'fitGridWidth',
       defaultMinWidth: 100
     }));
-
-    // Theme class
-    const themeClass = computed(() => `ag-theme-${props.content.theme || 'quartz'}`);
 
     // Handle grid ready event
     function onGridReady(params) {
